@@ -16,7 +16,7 @@ class DjangoJobStore(BaseJobStore):
     """
 
     def __init__(self, pickle_protocol=pickle.HIGHEST_PROTOCOL):
-        super().__init__()
+        super(DjangoJobStore, self).__init__()
         self.pickle_protocol = pickle_protocol
 
     def lookup_job(self, job_id):
